@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=69", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "legacy-java-analyzer"
+version = "0.1.0"
+description = "Legacy Java project analyzer for AI context generation"
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.9"
+authors = [
+  { name = "Wooyoung" }
+]
+keywords = ["legacy", "java", "mybatis", "spring", "analysis", "lsp"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Topic :: Software Development :: Quality Assurance",
+  "Topic :: Software Development :: Libraries :: Python Modules"
+]
+dependencies = []
+
+[project.scripts]
+legacy-analyzer = "legacy_analyzer:main"
+
+[tool.setuptools]
+py-modules = ["legacy_analyzer"]
+
+[tool.setuptools.package-dir]
+"" = "tools"
